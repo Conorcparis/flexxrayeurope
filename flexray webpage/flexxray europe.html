@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexXray Europe - Detect. Certify. Protect. | Food Safety X-Ray Verification</title>
+    <meta name="description" content="Europe's first independent X-ray food safety verification. 24-48 hour contamination detection preventing recalls. Lafayette Certificate for global exports.">
+    <meta name="keywords" content="food safety, X-ray inspection, contamination detection, Lafayette Certificate, European food verification">
+    <link rel="icon" type="image/png" href="FlexXrayLogo-2018-3.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables - Brand Colors */
+        :root {
+            --primary-blue: #2B5CE6;
+            --safety-orange: #FF6B35;
+            --trust-green: #27AE60;
+            --deep-navy: #1A365D;
+            --light-gray: #F7F9FC;
+            --medium-gray: #718096;
+            --warning-red: #E53E3E;
+            --certificate-gold: #D69E2E;
+            --white: #FFFFFF;
+            --border-gray: #E2E8F0;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--medium-gray);
+            background: var(--white);
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        /* Typography - Corporate Style */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.25rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--deep-navy);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--primary-blue);
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--deep-navy);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            color: var(--medium-gray);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+            font-weight: 300;
+        }
+
+        .lead-text {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: var(--deep-navy);
+        }
+
+        /* Language Switching */
+        .lang-block {
+            display: none;
+        }
+
+        .lang-block.active {
+            display: block;
+        }
+
+        /* Navigation - Corporate Style */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 4px 24px rgba(26,54,93,0.10);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-menu a {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            color: var(--medium-gray);
+            font-weight: 400;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .emergency-bar {
+            background: var(--safety-orange);
+            color: var(--white);
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--border-gray);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Corporate Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 1.25rem 2.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, var(--safety-orange) 0%, #e55a2b 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            border: none;
+        }
+
+        .btn.primary:hover {
+            background: linear-gradient(135deg, #e55a2b 0%, #d54d1f 100%);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn.secondary {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn.secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(43, 92, 230, 0.3);
+        }
+
+        /* Lafayette Certificate Highlight Box */
+        .lafayette-highlight {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1A365D 100%);
+            color: #111 !important;
+        }
+
+        .lafayette-box,
+        .lafayette-box h3,
+        .lafayette-box .tagline,
+        .lafayette-box p,
+        .lafayette-feature h4,
+        .lafayette-feature p {
+            color: #111 !important;
+        }
+
+        .lafayette-feature-icon {
+            color: var(--certificate-gold);
+        }
+
+        .lafayette-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .lafayette-box h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .lafayette-box .tagline {
+            font-style: italic;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .lafayette-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .lafayette-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .lafayette-feature {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .lafayette-feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .lafayette-feature h4 {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .lafayette-feature p {
+            font-size: 0.9rem;
+            margin: 0;
+            opacity: 0.8;
+        }
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--safety-orange) 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            box-shadow: 0 16px 48px rgba(43,92,230,0.18);
+            transform: translateY(-8px) scale(1.025);
+        }
+
+        .card h3, .card h4 {
+            color: var(--deep-navy);
+        }
+
+        .card p {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Corporate Section Styles */
+        section {
+            padding: 6rem 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section - Corporate Style */
+        .section-hero {
+            background: linear-gradient(135deg, 
+                        rgba(26, 54, 93, 0.95) 0%, 
+                        rgba(43, 92, 230, 0.85) 50%,
+                        rgba(26, 54, 93, 0.95) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="%23f8fafc"/><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                        rgba(26, 54, 93, 0.1) 0%, 
+                        transparent 50%, 
+                        rgba(43, 92, 230, 0.1) 100%);
+        }
+
+        .section-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-hero h1 {
+            color: var(--white);
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .section-hero h2 {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subheadline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-indicators {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .trust-indicators li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Alternating Section Backgrounds */
+        .section-value {
+            background: var(--light-gray);
+        }
+
+        .section-lafayette {
+            background: var(--deep-navy);
+            color: var(--white);
+        }
+
+        .section-lafayette h2,
+        .section-lafayette h3 {
+            color: var(--white);
+        }
+
+        .section-why {
+            background: var(--white);
+        }
+
+        .section-locations {
+            background: var(--light-gray);
+        }
+
+        .section-pricing {
+            background: var(--light-gray);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        thead {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        tbody tr:hover {
+            background: rgba(43, 92, 230, 0.05);
+        }
+
+        /* Certificate Tiers Highlighting */
+        .certificate-table .tier-highlight {
+            background: rgba(43, 92, 230, 0.1);
+            border: 2px solid var(--primary-blue);
+        }
+
+        /* Value Points */
+        .value-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .value-points h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        blockquote {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-left: 4px solid var(--primary-blue);
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        blockquote footer {
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--deep-navy);
+            font-size: 0.9rem;
+        }
+
+        /* Industry Blocks */
+        .industry-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .industry-block h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .section-contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--deep-navy);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border-gray);
+            border-radius: 50%;
+            border-top-color: var(--primary-blue);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .section-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .trust-indicators {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            table {
+                font-size: 0.875rem;
+            }
+
+            th, td {
+                padding: 0.5rem;
+            }
+
+            /* Stack tables on mobile */
+            .pricing-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--deep-navy);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(43, 92, 230, 0.1);
+        }
+
+        .hero-visual {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-width: 45vw;
+            max-height: 80vh;
+            opacity: 0.18;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @media (max-width: 900px) {
+            .hero-visual { display: none; }
+        }
+
+        .section-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0);}
+          50% { transform: translateY(10px);}
+        }
+
+        /* Add to your <style> section */
+        .value-points,
+        .value-points h4,
+        .value-points ul li {
+            color: #111 !important;
+        }
+        .value-points .card {
+            background: #fff !important;
+            color: #111 !important;
+            border: 1px solid #e2e8f0;
+        }
+        .certificate-table,
+.certificate-table th,
+.certificate-table td {
+    color: #111 !important;
+    background: #fff !important;
+}
+.certificate-table .tier-highlight {
+    background: #e6f0ff !important;
+    border: 2px solid var(--primary-blue);
+}
+.certificate-table th {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+}
+.certificate-table td {
+    text-align: center;
+    font-size: 1.05rem;
+    vertical-align: middle;
+    padding: 1.5rem 0.5rem;
+}
+.certificate-tier-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+}
+    </style>
+</head>
+<body>
+    <!-- Who We Are Section (now at the top) -->
+    <section class="section-about" style="background: var(--white); padding: 3rem 0 2rem 0;">
+        <div class="container">
+            <div class="lang-block active" data-lang="en">
+                <h1 style="color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 1rem;">Who We Are</h1>
+                <p style="font-size: 1.25rem; color: #222; margin-bottom: 0.5rem;">
+                    FlexXray Europe is the continent’s first independent X-ray food safety verification provider.
+                </p>
+                <p style="font-size: 1.1rem; color: #444;">
+                    We help food producers prevent recalls, protect consumers, and unlock global markets with advanced 3D X-ray technology and the unique Lafayette Certificate™.
+                </p>
+            </div>
+            <div class="lang-block" data-lang="fr">
+                <h1 style="color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 1rem;">Qui sommes-nous ?</h1>
+                <p style="font-size: 1.25rem; color: #222; margin-bottom: 0.5rem;">
+                    FlexXray Europe est le premier prestataire indépendant de vérification alimentaire par rayons X en Europe.
+                </p>
+                <p style="font-size: 1.1rem; color: #444;">
+                    Nous aidons les producteurs à prévenir les rappels, protéger les consommateurs et accéder aux marchés mondiaux grâce à la technologie 3D et au Lafayette Certificate™.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Bar -->
+    <div class="emergency-bar">
+        <div class="lang-block active" data-lang="en">
+            🚨 Emergency Contamination Response: +33 (0)1 XX XX XX XX - 24/7 Hotline
+        </div>
+        <div class="lang-block" data-lang="fr">
+            🚨 Intervention d'urgence contamination : +33 (0)1 XX XX XX XX - Ligne 24h/24
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="FlexXrayLogo-2018-3.png" alt="FlexXray Europe Logo" style="height: 64px; width: auto; display: block;">
+                <span style="font-size: 1.25rem; color: var(--primary-blue); font-family: 'Merriweather', serif; font-weight: 700; letter-spacing: -0.5px;">FlexXray Europe</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#value-proposition">Services</a></li>
+                <li><a href="#lafayette">Certificat Lafayette</a></li>
+                <li><a href="#detected-items">Ce que nous détectons</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="lang-switch">
+                    <button class="lang-btn active" onclick="switchLang('en')" aria-label="English" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <!-- US Flag SVG -->
+                        <span style="width: 22px; height: 16px; display: inline-block;">
+                            <svg viewBox="0 0 60 40" width="22" height="16">
+                                <rect width="60" height="40" fill="#b22234"/>
+                                <g fill="#fff">
+                                    <rect y="4" width="60" height="4"/>
+                                    <rect y="12" width="60" height="4"/>
+                                    <rect y="20" width="60" height="4"/>
+                                    <rect y="28" width="60" height="4"/>
+                                    <rect y="36" width="60" height="4"/>
+                                </g>
+                                <rect width="24" height="16" fill="#3c3b6e"/>
+                                <g fill="#fff">
+                                    <g id="s18">
+                                        <g id="s9">
+                                            <polygon points="2.4,1.6 3,3.2 4.8,3.2 3.4,4.2 4,5.8 2.4,4.8 0.8,5.8 1.4,4.2 0,3.2 1.8,3.2"/>
+                                            <use xlink:href="#s9" x="4.8"/>
+                                            <use xlink:href="#s9" x="9.6"/>
+                                            <use xlink:href="#s9" x="14.4"/>
+                                            <use xlink:href="#s9" x="19.2"/>
+                                        </g>
+                                        <use xlink:href="#s9" y="3.2"/>
+                                        <use xlink:href="#s9" y="6.4"/>
+                                        <use xlink:href="#s9" y="9.6"/>
+                                    </g>
+                                    <use xlink:href="#s18" x="2.4" y="1.6"/>
+                                </g>
+                            </svg>
+                        </span>
+                        EN
+                    </button>
+                    <button class="lang-btn" onclick="switchLang('fr')" aria-label="Français" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <!-- French Flag SVG -->
+                        <span style="width: 22px; height: 16px; display: inline-block;">
+                            <svg viewBox="0 0 3 2" width="22" height="16">
+                                <rect width="1" height="2" x="0" y="0" fill="#0055A4"/>
+                                <rect width="1" height="2" x="1" y="0" fill="#fff"/>
+                                <rect width="1" height="2" x="2" y="0" fill="#EF4135"/>
+                            </svg>
+                        </span>
+                        FR
+                    </button>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section-hero">
+        <div class="container">
+            <div class="lang-block active" data-lang="en">
+                <h1>Detect. Certify. Protect.</h1>
+                <h2><em>Scaling Trust Across Europe's Food Supply Chain</em></h2>
+                <p class="hero-subheadline">
+                    Europe's First Independent X-Ray Food Safety Verification – 24–48 hour contamination detection that prevents recalls, protects consumers, and saves your business.
+                </p>
+                <p>
+                    Every year, European food companies lose €2.3B to preventable recalls. Glass fragments, metal contamination, and foreign objects that slip through traditional quality control destroy brands and endanger lives.
+                </p>
+                <p><strong>FlexXray Europe changes everything.</strong></p>
+                <p>
+                    Our independent X-ray verification catches contamination before it reaches consumers – giving you the Lafayette Certificate™ that proves your products are safe for European and global markets.
+                </p>
+                <ul class="trust-indicators">
+                    <li>✅ <strong>Significant investment in recall prevention</strong> for European clients</li>
+                    <li>✅ <strong>24–48 hour turnaround</strong> vs weeks for alternatives</li>
+                    <li>✅ <strong>Advanced detection technology</strong> with proven reliability</li>
+                    <li>✅ <strong>Lafayette Certificate™</strong> accepted by major regulators and retailers</li>
+                </ul>
+            </div>
+            <div class="lang-block" data-lang="fr">
+                <h1>Détecter. Certifier. Protéger.</h1>
+                <h2><em>Construire la confiance dans la chaîne alimentaire européenne</em></h2>
+                <p class="hero-subheadline">
+                    Première plateforme indépendante de vérification par rayons X en Europe – détection de contamination en 24–48h pour prévenir les rappels, protéger les consommateurs et préserver votre entreprise.
+                </p>
+                <p>
+                    Chaque année, les entreprises alimentaires européennes perdent 2,3 milliards d'euros à cause de rappels évitables. Fragments de verre, métaux, objets étrangers... ce que le contrôle qualité traditionnel ne voit pas peut ruiner une marque.
+                </p>
+                <p><strong>FlexXray Europe change la donne.</strong></p>
+                <p>
+                    Notre service indépendant de vérification par rayons X détecte les contaminations avant qu'elles n'atteignent les consommateurs – et délivre le Lafayette Certificate™ prouvant la conformité de vos produits aux marchés européens et mondiaux.
+                </p>
+            </div>
+
+            <img src="Mito-full.webp" alt="Mito X-ray System" class="hero-visual">
+        </div>
+
+        <div style="position: absolute; left: 50%; bottom: 2rem; transform: translateX(-50%); z-index: 3;">
+          <span style="display: inline-block; animation: bounce 1.5s infinite; font-size: 2rem; color: var(--primary-blue); opacity: 0.9;">&#8595;</span>
+        </div>
+    </section>
+
+    <div style="line-height:0; position:relative; z-index:2;">
+      <svg viewBox="0 0 1440 80" width="100%" height="80" preserveAspectRatio="none" style="display:block;">
+        <path fill="#fff" d="M0,32L48,42.7C96,53,192,75,288,74.7C384,75,480,53,576,53.3C672,53,768,75,864,80C960,85,1056,75,1152,64C1248,53,1344,43,1392,37.3L1440,32V80H0Z"></path>
+      </svg>
+    </div>
+
+    <!-- Value Proposition Section -->
+    <section id="value-proposition" class="section-value">
+        <div class="container">
+            <div class="lang-block active" data-lang="en">
+                <h2>How Do We Help?</h2>
+
+                <div class="card">
+                    <h3>Problem Statement:</h3>
+                    <p><strong>Your current food safety controls are missing critical threats.</strong></p>
+                    <p>
+                        Metal detectors are blind to non-metallic contaminants like glass, stone, and plastic. Standard 2D X-ray systems often miss hazards if they're angled unfavorably—leading to dangerous blind spots. Once contamination reaches the consumer, it’s already too late. The average recall costs over €50,000 per container, not including reputational damage that can take years to recover.
+                    </p>
+                    <div style="margin: 1.5rem 0;">
+                        <strong>Common Foreign Bodies Detected:</strong>
+                        <ul style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1rem; list-style: none; padding: 0;">
+                            <li style="min-width:120px;">
+                                <img src="glass.jpg" alt="Glass fragment" style="width:48px; height:48px; object-fit:cover; border-radius:8px; display:block; margin-bottom:0.5rem;">
+                                <span>Glass</span>
+                            </li>
+                            <li style="min-width:120px;">
+                                <img src="metal shavinsg.jpg" alt="Metal shaving" style="width:48px; height:48px; object-fit:cover; border-radius:8px; display:block; margin-bottom:0.5rem;">
+                                <span>Metal</span>
+                            </li>
+                            <li style="min-width:120px;">
+                                <img src="stone.jpg" alt="Stone" style="width:48px; height:48px; object-fit:cover; border-radius:8px; display:block; margin-bottom:0.5rem;">
+                                <span>Stone</span>
+                            </li>
+                            <li style="min-width:120px;">
+                                <img src="plastic.jpg" alt="Plastic piece" style="width:48px; height:48px; object-fit:cover; border-radius:8px; display:block; margin-bottom:0.5rem;">
+                                <span>Plastic</span>
+                            </li>
+                            <!-- Add more as needed -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>✅ Solution Statement:</h3>
+                    <div style="display: flex; align-items: stretch; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                        <div class="card" style="flex: 1 1 340px; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+                            <h3>✅ Solution Statement:</h3>
+                            <p>
+                                <strong>Meet Mito – Europe’s first X-ray inspection system with real-time 3D reconstruction.</strong>
+                            </p>
+                            <p>
+                                Mito is the only inline food safety system using patented Computed Tomography (CT) to generate full 3D models of each product—capturing internal and external structures, packaging, and hidden contaminants with unmatched precision.
+                            </p>
+                            <p>
+                                Unlike conventional systems, Mito detects threats from any angle, reduces false rejects, and dramatically cuts waste, complaints, and costly recalls. It’s not just a scanner—it’s your brand’s insurance policy, protecting consumer safety and delivering trust with every batch.
+                            </p>
+                        </div>
+                        <img src="Mito-full.webp" alt="Mito X-ray System"
+                             style="flex: 1 1 340px; min-width: 300px; max-width: 100%; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 24px rgba(43,92,230,0.12); background: #fff; align-self: stretch;">
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 2.5rem; align-items: flex-start; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                    <img src="food scan.jpg" alt="Food detection in action – X-ray scan of food" style="flex: 1 1 340px; min-width: 300px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(43,92,230,0.12); background: #fff;">
+                    <div style="flex: 2 1 400px; min-width: 300px; display: flex; align-items: center;">
+                        <p style="font-size:1.1rem; color:#1A365D; margin:0;">
+                            <strong>Food Detection in Action:</strong><br>
+                            Our advanced X-ray system scans every product in real time, revealing hidden contaminants inside food and packaging. The image here shows a real scan in action—ensuring nothing dangerous gets through.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top:2.5rem;">The FlexXray Process</h3>
+                <div style="display: flex; gap: 2.5rem; justify-content: flex-start; align-items: flex-start; margin-bottom: 2.5rem; flex-wrap: wrap;">
+                    <div style="flex:1 1 120px; min-width:120px; text-align:center;">
+                        <img src="process-receive.svg" alt="Receive" style="height:48px; margin-bottom:0.75rem;">
+                        <div style="font-size:1.1rem; font-weight:600; color:#1A365D;">Receive</div>
+                        <div style="font-size:0.98rem; color:#444;">Products arrive at our inspection facility, securely tracked and logged.</div>
+                    </div>
+                    <div style="flex:1 1 120px; min-width:120px; text-align:center;">
+                        <img src="process-inspect.svg" alt="Inspect" style="height:48px; margin-bottom:0.75rem;">
+                        <div style="font-size:1.1rem; font-weight:600; color:#1A365D;">Inspect</div>
+                        <div style="font-size:0.98rem; color:#444;">Advanced 3D X-ray scanning detects and identifies foreign bodies.</div>
+                    </div>
+                    <div style="flex:1 1 120px; min-width:120px; text-align:center;">
+                        <img src="process-report.svg" alt="Report" style="height:48px; margin-bottom:0.75rem;">
+                        <div style="font-size:1.1rem; font-weight:600; color:#1A365D;">Report</div>
+                        <div style="font-size:0.98rem; color:#444;">You receive a detailed, regulator-ready report and certificate.</div>
+                    </div>
+                </div>
+
+                <h3>Service Overview:</h3>
+                <table class="service-overview-table">
+                    <thead>
+                        <tr>
+                            <th>Crisis Response</th>
+                            <th>Routine Verification</th>
+                            <th>Export Certification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Emergency 24-hour scanning when contamination is suspected</td>
+                            <td>Regular batch verification for ongoing quality assurance</td>
+                            <td>Lafayette Certificate™ for US/Canada/global export compliance</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile response teams across France</td>
+                            <td>Scheduled pickup and delivery service</td>
+                            <td>QR-tracked certification with blockchain verification</td>
+                        </tr>
+                        <tr>
+                            <td>Full contamination analysis and reporting</td>
+                            <td>Volume discounts for regular clients</td>
+                            <td>Accepted by major retailers and regulatory bodies</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="lang-block" data-lang="fr">
+                <h2>Le seul service indépendant de rayons X pour l'alimentation en Europe</h2>
+
+                <div class="card">
+                    <h3>Constat :</h3>
+                    <p><strong>Votre contrôle qualité actuel a des angles morts critiques.</strong></p>
+                    <p>
+                        Les détecteurs de métaux ne peuvent pas détecter les contaminants non métalliques comme le verre, la pierre ou le plastique. Les appareils de rayons X 2D conventionnels ne garantissent pas une fiabilité et une précision suffisantes pour détecter <strong>les corps étrangers sous un angle défavorable par rapport à la source de rayons X</strong>.
+                        Quand la contamination atteint le consommateur, il est trop tard : chaque rappel coûte en moyenne 50 000 € par conteneur, sans parler des dégâts sur la marque.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Solution :</h3>
+                    <div style="display: flex; align-items: stretch; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                        <div class="card" style="flex: 1 1 340px; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+                            <h3>✅ Solution Statement:</h3>
+                            <p>
+                                <strong>Mito est le premier et seul système d'inspection par rayons X avec technologie de reconstruction 3D sur le marché.</strong>
+                            </p>
+                            <p>
+                                Notre tomographe informatisé scanne les aliments en ligne et en temps réel, capturant et recréant en détail la <strong>forme</strong>, les <strong>caractéristiques internes et externes de qualité et de sécurité</strong>, et l'<strong>emballage</strong> de vos produits.
+                                La technologie brevetée de tomographie informatisée de Mito offre des avantages significatifs : moins d'erreurs et de gaspillage, éviter les pertes financières et les réclamations, et protéger la santé de vos consommateurs et la réputation de votre marque.
+                            </p>
+                        </div>
+                        <img src="Mito-full.webp" alt="Mito X-ray System"
+                             style="flex: 1 1 340px; min-width: 300px; max-width: 100%; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 24px rgba(43,92,230,0.12); background: #fff; align-self: stretch;">
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 2.5rem; align-items: flex-start; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                    <img src="food scan.jpg" alt="Food detection in action – X-ray scan of food" style="flex: 1 1 340px; min-width: 300px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(43,92,230,0.12); background: #fff;">
+                    <div style="flex: 2 1 400px; min-width: 300px; display: flex; align-items: center;">
+                        <p style="font-size:1.1rem; color:#1A365D; margin:0;">
+                            <strong>Food Detection in Action:</strong><br>
+                            Our advanced X-ray system scans every product in real time, revealing hidden contaminants inside food and packaging. The image here shows a real scan in action—ensuring nothing dangerous gets through.
+                        </p>
+                    </div>
+                </div>
+
+                <h3>Aperçu des services :</h3>
+                <table class="service-overview-table">
+                    <thead>
+                        <tr>
+                            <th>Réponse d'urgence</th>
+                            <th>Vérification régulière</th>
+                            <th>Certification export</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inspection urgente en 24h en cas de contamination suspectée</td>
+                            <td>Vérification de lots réguliers pour la qualité continue</td>
+                            <td>Certificat Lafayette™ pour conformité US/Canada/mondial</td>
+                        </tr>
+                        <tr>
+                            <td>Équipes mobiles en France</td>
+                            <td>Service de ramassage et livraison programmé</td>
+                            <td>Certification QR avec traçabilité blockchain</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top:2.5rem;">Le processus FlexXray</h3>
+                <div style="display: flex; gap: 2.5rem; justify-content: flex-start; align-items: flex-start; margin-bottom: 2.5rem; flex-wrap: wrap;">
+                    <div style="flex:1 1 120px; min-width:120px; text-align:center;">
+                        <img src="process-receive.svg" alt="Receive" style="height:48px; margin-bottom:0.75rem;">
+                        <div style="font-size:1.1rem; font-weight:600; color:#1A365D;">Réception</div>
+                        <div style="font-size:0.98rem; color:#444;">Les produits arrivent à notre installation, suivis et enregistrés en toute sécurité.</div>
+                    </div>
+                    <div style="flex:1 1 120px; min-width:120px; text-align:center;">
+                        <img src="process-inspect.svg" alt="Inspect" style="height:48px; margin-bottom:0.75rem;">
+                        <div style="font-size:1.1rem; font-weight:600; color:#1A365D;">Inspection</div>
+                        <div style="font-size:0.98rem; color:#444;">La détection par rayons X 3D avancée identifie les corps étrangers.</div>
+                    </div>
+                    <div style="flex:1 1 120px; min-width:120px; text-align:center;">
+                        <img src="process-report.svg" alt="Report" style="height:48px; margin-bottom:0.75rem;">
+                        <div style="font-size:1.1rem; font-weight:600; color:#1A365D;">Rapport</div>
+                        <div style="font-size:0.98rem; color:#444;">Vous recevez un rapport détaillé, prêt pour les régulateurs.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lafayette Certificate Section -->
+    <section id="lafayette" class="section-lafayette">
+        <div class="container">
+            <div class="lang-block active" data-lang="en">
+                <div style="display: flex; align-items: flex-start; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                    <img src="lafayette cert.png" alt="Lafayette Certificate Badge" style="flex: 0 0 140px; max-width: 140px; width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(43,92,230,0.10); background: #fff;">
+                    <div style="flex: 1 1 400px; min-width: 300px;">
+                        <h2>Lafayette Certificate™: Your Passport to Global Markets</h2>
+                        <h3><em>"Giving protection on both sides of the Atlantic"</em></h3>
+
+                        <p><strong>The first transatlantic food safety certification enabling seamless US-EU trade.</strong></p>
+
+                        <p>
+                            15–20% of food shipments face delays or rejection at international borders. The Lafayette Certificate™ provides pre-clearance documentation that:
+                        </p>
+                        <ul>
+                            <li>✅ Reduces export rejections by 90%</li>
+                            <li>✅ Accelerates customs clearance</li>
+                            <li>✅ Builds buyer confidence globally</li>
+                            <li>✅ Meets FDA and EU regulatory requirements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="value-points">
+                    <div class="card" style="color:#111;background:#fff;">
+                        <h4 style="color:#111;">US → Europe Flow</h4>
+                        <ul>
+                            <li style="color:#111;">✓ Pre-clear American exports at FlexXray US facilities</li>
+                            <li style="color:#111;">✓ Issue Lafayette Certificate with QR verification</li>
+                            <li style="color:#111;">✓ EU customs pre-cleared for 90% faster processing</li>
+                            <li style="color:#111;">✓ European buyers receive guaranteed-safe products</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="color:#111;background:#fff;">
+                        <h4 style="color:#111;">Europe → US Flow</h4>
+                        <ul>
+                            <li style="color:#111;">✓ Inspect at FlexXray Europe facilities in France/Italy</li>
+                            <li style="color:#111;">✓ FDA-aligned protocols ensure US compliance</li>
+                            <li style="color:#111;">✓ Lafayette Certificate provides import documentation</li>
+                            <li style="color:#111;">✓ US buyers gain confidence in European suppliers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Certificate Tiers:</h3>
+                <table class="certificate-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="certificate-tier-icon" style="color:#bdbdbd;">&#x1F6E1;</span>
+                                Shield
+                            </th>
+                            <th class="tier-highlight">
+                                <span class="certificate-tier-icon" style="color:var(--primary-blue);">&#x1F6E1;</span>
+                                Guardian
+                            </th>
+                            <th>
+                                <span class="certificate-tier-icon" style="color:#FFD700;">&#x1F6E1;</span>
+                                Sentinel
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pricing on request</td>
+                            <td class="tier-highlight">Pricing on request</td>
+                            <td>Pricing on request</td>
+                        </tr>
+                        <tr>
+                            <td>Single shipment certification</td>
+                            <td class="tier-highlight">5 certificates included monthly</td>
+                            <td>Unlimited certificates</td>
+                        </tr>
+                        <tr>
+                            <td>30-day validity</td>
+                            <td class="tier-highlight">90-day validity</td>
+                            <td>1-year validity</td>
+                        </tr>
+                        <tr>
+                            <td>Standard processing</td>
+                            <td class="tier-highlight">Priority support</td>
+                            <td>24/7 dedicated service</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="lang-block" data-lang="fr">
+                <div style="display: flex; align-items: flex-start; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                    <img src="lafayette cert.png" alt="Badge Lafayette Certificate" style="flex: 0 0 140px; max-width: 140px; width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(43,92,230,0.10); background: #fff;">
+                    <div style="flex: 1 1 400px; min-width: 300px;">
+                        <h2>Lafayette Certificate™ : Votre passeport vers les marchés mondiaux</h2>
+                        <h3><em>"Une protection des deux côtés de l'Atlantique"</em></h3>
+                        <p><strong>La première certification transatlantique en sécurité alimentaire permettant un commerce fluide entre les États-Unis et l'UE.</strong></p>
+                        <p>
+                            15 à 20 % des expéditions alimentaires sont retardées ou rejetées aux frontières. Le Lafayette Certificate™ offre une documentation de pré-dédouanement qui :
+                        </p>
+                        <ul>
+                            <li>✅ Réduit les rejets d'exportation de 90 %</li>
+                            <li>✅ Accélère le passage en douane</li>
+                            <li>✅ Renforce la confiance des acheteurs à l'international</li>
+                            <li>✅ Respecte les exigences FDA et UE</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="value-points">
+                    <div class="card" style="color:#111;background:#fff;">
+                        <h4 style="color:#111;">Flux États-Unis → Europe</h4>
+                        <ul>
+                            <li style="color:#111;">✓ Pré-contrôle des produits US dans les installations FlexXray</li>
+                            <li style="color:#111;">✓ Délivrance du Lafayette Certificate avec QR de vérification</li>
+                            <li style="color:#111;">✓ Dédouanement accéléré (jusqu'à 90 % de gain de temps)</li>
+                            <li style="color:#111;">✓ Livraison de produits sûrs aux clients européens</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="color:#111;background:#fff;">
+                        <h4 style="color:#111;">Flux Europe → États-Unis</h4>
+                        <ul>
+                            <li style="color:#111;">✓ Inspection dans nos installations en France/Italie</li>
+                            <li style="color:#111;">✓ Protocoles alignés FDA pour conformité US</li>
+                            <li style="color:#111;">✓ Certificat utilisé comme preuve à l'importation</li>
+                            <li style="color:#111;">✓ Renforce la confiance des clients US envers les fournisseurs européens</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Niveaux de certification :</h3>
+                <table class="certificate-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="certificate-tier-icon" style="color:#bdbdbd;">&#x1F6E1;</span>
+                                Shield
+                            </th>
+                            <th class="tier-highlight">
+                                <span class="certificate-tier-icon" style="color:var(--primary-blue);">&#x1F6E1;</span>
+                                Guardian
+                            </th>
+                            <th>
+                                <span class="certificate-tier-icon" style="color:#FFD700;">&#x1F6E1;</span>
+                                Sentinel
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tarif sur demande</td>
+                            <td class="tier-highlight">Tarif sur demande</td>
+                            <td>Tarif sur demande</td>
+                        </tr>
+                        <tr>
+                            <td>Certification d'expédition unique</td>
+                            <td class="tier-highlight">5 certificats inclus par mois</td>
+                            <td>Certificats illimités</td>
+                        </tr>
+                        <tr>
+                            <td>Validité 30 jours</td>
+                            <td class="tier-highlight">Validité 90 jours</td>
+                            <td>Validité 1 an</td>
+                        </tr>
+                        <tr>
+                            <td>Traitement standard</td>
+                            <td class="tier-highlight">Support prioritaire</td>
+                            <td>Service dédié 24/7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why FlexXray Section -->
+    <section id="why-flexxray" class="section-why">
+        <div class="container">
+            <div class="lang-block active" data-lang="en">
+                <h2>Why Europe's Food Leaders Choose FlexXray</h2>
+
+                <div class="value-points">
+                    <div class="card">
+                        <h3>🎯 Only Independent Provider</h3>
+                        <p>
+                            Unlike equipment manufacturers who sell you machines, we provide unbiased verification services. 
+                            No conflicts of interest, just honest contamination detection you can trust.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🚀 Proven Track Record</h3>
+                        <p>
+                            Our organization processes significant volumes annually across multiple facilities. 
+                            We're bringing battle-tested processes and technology to Europe with local expertise and regulatory compliance.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>⚡ Speed That Saves Money</h3>
+                        <p>
+                            24–48 hour turnaround vs 2–3 weeks for university labs. When contamination is suspected, every hour costs money. 
+                            We deliver answers fast.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🌍 Global Market Access</h3>
+                        <p>
+                            Lafayette Certificate™ opens doors to US, Canadian, and Asian markets. Turn food safety compliance into competitive advantage.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🔒 3D Technology Advantage</h3>
+                        <p>
+                            Our patented computed tomography technology provides complete 3D analysis with no blind spots. 
+                            Revolutionary detection capability that conventional 2D systems cannot match.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <blockquote>
+                        "FlexXray's 3D technology found contamination that our conventional X-ray system missed completely. They saved us from a major recall and protected our brand reputation."  
+                        <footer>– Quality Director, Major French Food Producer</footer>
+                    </blockquote>
+                    <blockquote>
+                        "The Lafayette Certificate opened the US market for our premium products. Sales increased significantly in the first year."  
+                        <footer>– Export Manager, European Food Company</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="lang-block" data-lang="fr">
+                <h2>Pourquoi les leaders de l'alimentation en Europe choisissent FlexXray</h2>
+
+                <div class="value-points">
+                    <div class="card">
+                        <h3>🎯 Fournisseur indépendant unique</h3>
+                        <p>
+                            Contrairement aux fabricants d'équipements, nous ne vendons pas de machines. 
+                            Nous offrons un service impartial de vérification. Aucun conflit d'intérêt – uniquement une détection fiable.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🚀 Expérience éprouvée</h3>
+                        <p>
+                            Nos installations traitent des volumes importants chaque année. 
+                            Nous apportons en Europe une technologie testée, avec expertise locale et conformité réglementaire.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>⚡ Vitesse = économies</h3>
+                        <p>
+                            Résultats en 24–48h contre 2–3 semaines pour les laboratoires. En cas de contamination, chaque heure compte.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🌍 Accès aux marchés mondiaux</h3>
+                        <p>
+                            Le Lafayette Certificate™ ouvre l'accès aux marchés US, canadiens et asiatiques. Faites de la conformité un avantage concurrentiel.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🔒 Avantage technologique 3D</h3>
+                        <p>
+                            Notre technologie brevetée de tomographie informatisée offre une analyse 3D complète sans angles morts. 
+                            Capacité de détection révolutionnaire que les systèmes 2D conventionnels ne peuvent égaler.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <blockquote>
+                        « La technologie 3D de FlexXray a détecté une contamination que notre système de rayons X conventionnel avait complètement manquée. Ils nous ont évité un rappel majeur et protégé notre réputation. »  
+                        <footer>– Directeur Qualité, Producteur alimentaire français</footer>
+                    </blockquote>
+                    <blockquote>
+                        « Le Lafayette Certificate nous a ouvert le marché américain pour nos produits premium. Les ventes ont considérablement augmenté la première année. »  
+                        <footer>– Responsable export, Entreprise alimentaire européenne</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-contact">
+        <div class="container">
+            <div class="lang-block active" data-lang="en">
+                <h2>Ready to Protect Your Brand and Your Customers?</h2>
+
+                <div class="contact-grid">
+                    <div class="card">
+                        <h3>🚨 Emergency Contamination Response</h3>
+                        <p><strong>Call now:</strong> <a href="tel:+33142XX XXXX">+33 (0)1 42 XX XX XX</a></p>
+                        <p>24/7 hotline for immediate contamination concerns</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📅 Schedule Your Consultation</h3>
+                        <ul>
+                            <li>Discover contamination risks in your current process</li>
+                            <li>Get customized recommendations for your products</li>
+                            <li>Learn about Lafayette Certificate™ opportunities</li>
+                        </ul>
+                        <a href="mailto:info@flexxray-europe.com?subject=Consultation%20Request" class="btn primary">Request Consultation</a>
+                    </div>
+
+                    <div class="card">
+                        <h3>📧 General Inquiries</h3>
+                        <p><strong>Email:</strong> <a href="mailto:info@flexxray-europe.com">info@flexxray-europe.com</a></p>
+                        <p><em>Response time:</em> Within 4 hours during business days</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📍 Visit Our Facilities</h3>
+                        <p><strong>Beaujolais Location:</strong></p>
+                        <p>Available upon request – Contact us for address and directions</p>
+                        <p><strong>Tours available:</strong> Monday–Friday, 9:00–17:00 by appointment</p>
+                        <div style="margin-top:1rem;">
+        <iframe
+            src="https://www.google.com/maps?q=Beaujolais,+France&output=embed"
+            width="100%" height="200" style="border:0; border-radius:8px;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Beaujolais Location Map"></iframe>
+    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-block" data-lang="fr">
+                <h2>Prêt à protéger votre marque et vos clients ?</h2>
+
+                <div class="contact-grid">
+                    <div class="card">
+                        <h3>🚨 Intervention d'urgence contamination</h3>
+                        <p><strong>Appelez-nous :</strong> <a href="tel:+33142XXXXXX">+33 (0)1 42 XX XX XX</a></p>
+                        <p>Ligne d'urgence 24h/24 – Contamination suspectée</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📅 Planifiez votre consultation</h3>
+                        <ul>
+                            <li>Analyse des risques de contamination dans vos processus</li>
+                            <li>Recommandations personnalisées</li>
+                            <li>Présentation du Lafayette Certificate™</li>
+                        </ul>
+                        <a href="mailto:info@flexxray-europe.com?subject=Demande%20de%20consultation" class="btn primary">Demander une consultation</a>
+                    </div>
+
+                    <div class="card">
+                        <h3>📧 Demandes générales</h3>
+                        <p><strong>Email :</strong> <a href="mailto:info@flexxray-europe.com">info@flexxray-europe.com</a></p>
+                        <p><em>Délai de réponse :</em> Sous 4h en semaine</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📍 Visitez nos installations</h3>
+                        <p><strong>Site de Beaujolais :</strong></p>
+                        <p>Adresse sur demande – Merci de nous contacter</p>
+                        <p><strong>Visites :</strong> Lundi–Vendredi, 9h–17h sur RDV</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detected Items Section -->
+    <section id="detected-items" class="section-detected-items" style="background: var(--light-gray); padding: 4rem 0;">
+        <div class="container">
+            <h2>What We Detect</h2>
+            <div class="detected-items-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem;">
+                <div>
+                    <img src="glass.jpg" alt="Glass fragment in food" style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                    <p style="text-align:center; margin-top:0.5rem;">Glass fragment</p>
+                </div>
+                <div>
+                    <img src="metal shavinsg.jpg" alt="Metal shaving in food" style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                    <p style="text-align:center; margin-top:0.5rem;">Metal shaving</p>
+                </div>
+                <div>
+                    <img src="stone.jpg" alt="Stone in food" style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                    <p style="text-align:center; margin-top:0.5rem;">Stone</p>
+                </div>
+                <div>
+                    <img src="plastic.jpg" alt="Plastic piece in food" style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                    <p style="text-align:center; margin-top:0.5rem;">Plastic piece</p>
+                </div>
+                <!-- Add more as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <img src="FlexXrayLogo-2018-3.png" alt="FlexXray Europe Logo" style="height: 56px; width: auto; margin-bottom: 0.75rem;">
+                    <h4>FlexXray Europe</h4>
+                    <p>Detect. Certify. Protect.</p>
+                    <p>Scaling Trust Across Europe's Food Supply Chain</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#value-proposition">3D X-Ray Inspection</a></li>
+                        <li><a href="#lafayette">Lafayette Certificate™</a></li>
+                        <li><a href="#contact">Emergency Response</a></li>
+                        <li><a href="#contact">Consulting Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#why-flexxray">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Certifications</h4>
+                    <ul style="list-style: none;">
+                        <li>ASN Radiation Safety</li>
+                        <li>HACCP Certified</li>
+                        <li>EU Food Safety Compliant</li>
+                        <li>FDA Aligned Protocols</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FlexXray Europe. All rights reserved. | Registered in Ireland | VAT: IE123456789</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Switching
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-block').forEach(block => {
+                block.classList.remove('active');
+            });
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(block => {
+                block.classList.add('active');
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            document.documentElement.lang = lang;
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.card, section').forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+        });
+
+        // Mobile menu toggle (basic implementation)
+        document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Form submission handling
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                setTimeout(() => {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
